@@ -5,10 +5,13 @@ extends CharacterBody2D
 @export var arctic = false
 
 func _ready() -> void:
-	pass
+	if arctic:
+		sprite.sprite_frames = preload("res://ArcticFoxFrames.tres")
+	else:
+		sprite.sprite_frames = preload("res://FoxFrames.tres")
 
 func _process(delta: float) -> void:
-	pass
+	pass	
 
 func get_input() -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
