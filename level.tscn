@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch50nc763qy0s"]
+
+[ext_resource type="PackedScene" uid="uid://dwo4tl8ksmecl" path="res://fox.tscn" id="1_dcx8h"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Fox" parent="." instance=ExtResource("1_dcx8h")]
