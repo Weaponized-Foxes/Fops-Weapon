@@ -246,7 +246,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"damage",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -272,7 +272,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"die",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -292,7 +292,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -330,7 +330,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -377,7 +377,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"look_behind",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -406,7 +406,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -429,5 +429,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"sleep",
-"speed": 5.0
+"speed": 10.0
 }]
