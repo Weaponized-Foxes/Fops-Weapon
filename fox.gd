@@ -5,6 +5,7 @@ enum FoxType {Default, Arctic}
 @export var speed = 400
 @export var type = FoxType.Default
 @export var attackSpeed = 0.5
+@export var damage = 20
 
 var attackTimer = 0
 
@@ -13,14 +14,25 @@ func _ready() -> void:
 		update_texture(preload("res://Arctic Fox Sprite Sheet.png"))
 
 func _process(delta: float) -> void:
+	handle_attacks(delta)
+
+func handle_attacks(delta: float) -> void:
 	attackTimer -= delta
 
 	$Slash.look_at(get_global_mouse_position())
 
-	if Input.is_action_pressed("basic_attack"):
+	if $Slash/Sprite.is_playing():
 		if attackTimer < 0:
 			attackTimer = attackSpeed
-			$Slash/Sprite.play()
+			basic_attack()
+	else:
+		if Input.is_action_pressed("basic_attack"):
+			if attackTimer < 0:
+				$Slash/Sprite.play()
+
+func basic_attack():
+	for enemy in $Slash.get_overlapping_bodies():
+		enemy.damage(damage)
 
 func get_input() -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")

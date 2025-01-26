@@ -13,6 +13,7 @@ height = 15.5
 
 [node name="Fox" type="CharacterBody2D"]
 scale = Vector2(4, 4)
+collision_mask = 7
 motion_mode = 1
 script = ExtResource("1_f3bo6")
 
@@ -27,6 +28,7 @@ shape = SubResource("CircleShape2D_f8pgw")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Slash" type="Area2D" parent="."]
+scale = Vector2(2, 2)
 collision_layer = 0
 collision_mask = 2
 
