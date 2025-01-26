@@ -22,7 +22,7 @@ func handle_attacks(delta: float) -> void:
 	$Slash.look_at(get_global_mouse_position())
 
 	if $Slash/Sprite.is_playing():
-		if attackTimer < 0:
+		if attackTimer < 0 and $Slash/Sprite.frame == 5: # middle of slash animation
 			attackTimer = attackSpeed
 			basic_attack()
 	else:
