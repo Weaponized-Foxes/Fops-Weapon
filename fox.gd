@@ -4,13 +4,23 @@ enum FoxType {Default, Arctic}
 
 @export var speed = 400
 @export var type = FoxType.Default
+@export var attackSpeed = 0.5
+
+var attackTimer = 0
 
 func _ready() -> void:
 	if type == FoxType.Arctic:
 		update_texture(preload("res://Arctic Fox Sprite Sheet.png"))
 
 func _process(delta: float) -> void:
-	pass	
+	attackTimer -= delta
+
+	$Slash.look_at(get_global_mouse_position())
+
+	if Input.is_action_pressed("basic_attack"):
+		if attackTimer < 0:
+			attackTimer = attackSpeed
+			$Slash/Sprite.play()
 
 func get_input() -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -33,6 +43,7 @@ func get_input() -> void:
 		elif type == FoxType.Arctic:
 			type = FoxType.Default
 			update_texture(preload("res://Fox Sprite Sheet.png"))
+
 
 func update_texture(texture: Texture):
 	var reference_frames: SpriteFrames = $Sprite.sprite_frames
