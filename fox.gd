@@ -31,7 +31,8 @@ func get_input() -> void:
 			sprite.sprite_frames = preload("res://ArcticFoxFrames.tres")
 		else:
 			sprite.sprite_frames = preload("res://FoxFrames.tres")
-
+	if Input.is_action_just_pressed("ui_accept"):
+		get_tree().change_scene_to_file("res://shop.tscn")
 	
 
 func _physics_process(delta: float) -> void:
