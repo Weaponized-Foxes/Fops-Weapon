@@ -18,7 +18,7 @@ func ai():
 	var sqr_dist_to_fox = (%Fox.global_position - global_position).length_squared()
 	if sqr_dist_to_fox > 40000:
 		move_to_player()
-	elif sqr_dist_to_fox > 800:
+	else:
 		throw()
 
 func throw():

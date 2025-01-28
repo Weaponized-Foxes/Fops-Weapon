@@ -10,6 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if $Sprite.animation == "damage" && $Sprite.is_playing():
 		return
+	look_at_player()
 	if $HealthBar.value <= 0:
 		if not $Sprite.is_playing():
 			queue_free()
@@ -29,6 +30,13 @@ func die():
 func move_to_player():
 	var direction = %Fox.global_position - global_position
 	velocity = direction.normalized() * speed
+
+func look_at_player():
+	var direction = %Fox.global_position - global_position
+	if direction.x > 0:
+		$Sprite.flip_h = false
+	elif direction.x < 0:
+		$Sprite.flip_h = true
 
 func ai():
 	# print(name + " is thinking...")
