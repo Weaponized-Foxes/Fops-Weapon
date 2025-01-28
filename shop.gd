@@ -2,7 +2,11 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.	get_tree().root.add_child.call_deferred(ShopInstantiate)
+	var healthUp = powerUp.new("Player Health Up", "Increase player health by 100", 100, "Health", [], 100) 
+	var testRequirements = []
+	testRequirements.append(healthUp)
+	var healthDown = powerUp.new("Player Health Down", "Decrease player health by 100", -100, "Health", testRequirements, 100)
+	pass 
 
 
 
