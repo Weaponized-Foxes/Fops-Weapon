@@ -1,16 +1,16 @@
 extends CharacterBody2D
 
-@export var health = 40
+@export var max_health = 40
 @export var speed = 170;
 
 func _ready() -> void:
-	$HealthBar.max_value = health
-	$HealthBar.value = health
+	$HealthBar.max_value = max_health
+	$HealthBar.value = max_health
 
 func _process(delta: float) -> void:
 	if $Sprite.animation == "damage" && $Sprite.is_playing():
 		return
-	if health <= 0:
+	if $HealthBar.value <= 0:
 		if not $Sprite.is_playing():
 			queue_free()
 	else:
@@ -18,10 +18,9 @@ func _process(delta: float) -> void:
 		move_and_slide()
 
 func damage(dmg: int):
-	health -= dmg
-	$HealthBar.value = health
+	$HealthBar.value -= dmg
 	$Sprite.play("damage")
-	if health <= 0:
+	if $HealthBar.value <= 0:
 		die()
 
 func die():

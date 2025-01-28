@@ -2,14 +2,17 @@ extends CharacterBody2D
 
 enum FoxType {Default, Arctic}
 
+@export var max_health = 100
 @export var speed = 200
 @export var type = FoxType.Default
 @export var attackSpeed = 0.5
-@export var damage = 20
+@export var atttackDamage = 20
 
 var attackTimer = 0
 
 func _ready() -> void:
+	$HealthBar.max_value = max_health
+	$HealthBar.value = max_health
 	if type == FoxType.Arctic:
 		update_texture(preload("res://Arctic Fox Sprite Sheet.png"))
 
@@ -32,7 +35,7 @@ func handle_attacks(delta: float) -> void:
 
 func basic_attack():
 	for enemy in $Slash.get_overlapping_bodies():
-		enemy.damage(damage)
+		enemy.damage(atttackDamage)
 
 func get_input() -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -56,6 +59,8 @@ func get_input() -> void:
 			type = FoxType.Default
 			update_texture(preload("res://Fox Sprite Sheet.png"))
 
+func damage(dmg: int):
+	$HealthBar.value -= dmg
 
 func update_texture(texture: Texture):
 	var reference_frames: SpriteFrames = $Sprite.sprite_frames

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwo4tl8ksmecl"]
+[gd_scene load_steps=8 format=3 uid="uid://dwo4tl8ksmecl"]
 
 [ext_resource type="SpriteFrames" uid="uid://d1q6e7cimgf1m" path="res://FoxFrames.tres" id="1_atmgh"]
 [ext_resource type="Script" path="res://fox.gd" id="1_f3bo6"]
@@ -10,6 +10,11 @@ radius = 7.5
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gsyri"]
 radius = 3.75
 height = 15.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfa08"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nar0k"]
+bg_color = Color(0, 1, 0, 1)
 
 [node name="Fox" type="CharacterBody2D"]
 scale = Vector2(4, 4)
@@ -42,3 +47,12 @@ frame_progress = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Slash"]
 position = Vector2(6.25, 0)
 shape = SubResource("CapsuleShape2D_gsyri")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = 7.0
+offset_bottom = -8.0
+theme_override_styles/background = SubResource("StyleBoxFlat_xfa08")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nar0k")
+show_percentage = false

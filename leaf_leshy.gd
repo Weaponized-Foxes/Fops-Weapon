@@ -1,6 +1,7 @@
 extends "res://enemy.gd"
 
-@export var seed_speed = 150
+@export var seed_speed = 120
+@export var seed_damage = 10
 
 var seedScene = preload("res://seed.tscn")
 
@@ -29,4 +30,5 @@ func spawn_seed():
 	var instance = seedScene.instantiate()
 	get_tree().root.add_child(instance)
 	instance.velocity = (%Fox.global_position - global_position).normalized() * seed_speed
+	instance.damage = seed_damage
 	instance.global_position = global_position
