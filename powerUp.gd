@@ -16,3 +16,6 @@ func _init(powerName: String, powerDescription: String, powerCost: int, powerTyp
 	self.powerType = powerType
 	self.powerRequirements = powerRequirements
 	self.powerModifier = powerModifier
+
+func _to_string():
+	return powerName + ", " + powerDescription
