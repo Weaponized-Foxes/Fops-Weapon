@@ -8,11 +8,9 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" parent="." instance=ExtResource("1_7hbol")]
-
 position = Vector2(0, 0)
 tile_map_data = PackedByteArray()
 script = ExtResource("2_i4bou")
-
 
 [node name="Fox" parent="." instance=ExtResource("1_dcx8h")]
 motion_mode = 1
