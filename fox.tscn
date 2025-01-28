@@ -2,7 +2,7 @@
 
 [ext_resource type="SpriteFrames" uid="uid://d1q6e7cimgf1m" path="res://FoxFrames.tres" id="1_atmgh"]
 [ext_resource type="Script" path="res://fox.gd" id="1_f3bo6"]
-[ext_resource type="SpriteFrames" uid="uid://crrfkcttv4ccd" path="res://SlashFrames.tres" id="3_fapsk"]
+[ext_resource type="SpriteFrames" uid="uid://bu0rd8ol2iprf" path="res://SlashFrames.tres" id="3_fapsk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f8pgw"]
 radius = 7.5
@@ -13,7 +13,7 @@ height = 15.5
 
 [node name="Fox" type="CharacterBody2D"]
 scale = Vector2(4, 4)
-collision_mask = 7
+collision_mask = 255
 motion_mode = 1
 script = ExtResource("1_f3bo6")
 

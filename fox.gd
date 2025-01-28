@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 enum FoxType {Default, Arctic}
 
-@export var speed = 400
+@export var speed = 200
 @export var type = FoxType.Default
 @export var attackSpeed = 0.5
 @export var damage = 20
