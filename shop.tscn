@@ -1,7 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://c7r4cw7kee86d"]
 
-[ext_resource type="Script" path="res://shop.gd" id="1_us46u"]
 [ext_resource type="Script" path="res://buy.gd" id="2_svpgi"]
+
+[sub_resource type="GDScript" id="GDScript_8l0pt"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+func pressed(name: String) -> void:
+	print(name)
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_us46u")
+script = SubResource("GDScript_8l0pt")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
