@@ -10,6 +10,8 @@ enum FoxType {Default, Arctic}
 
 var attackTimer = 0
 
+
+
 func _ready() -> void:
 	$HealthBar.max_value = max_health
 	$HealthBar.value = max_health
