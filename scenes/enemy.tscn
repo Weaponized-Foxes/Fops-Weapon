@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://vdbyqmi2fnoo"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_h4o78"]
-[ext_resource type="SpriteFrames" uid="uid://di3i1x7pmmafh" path="res://bobFrames.tres" id="2_3ajoh"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_h4o78"]
+[ext_resource type="SpriteFrames" uid="uid://di3i1x7pmmafh" path="res://sprites/bobFrames.tres" id="2_3ajoh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tigfr"]
 
