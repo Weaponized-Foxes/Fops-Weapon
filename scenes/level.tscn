@@ -20,3 +20,4 @@ position = Vector2(379, -17)
 seed_damage = 10
 max_health = 40
 speed = 170
+

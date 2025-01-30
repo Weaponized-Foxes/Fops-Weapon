@@ -7,7 +7,8 @@ enum FoxType {Default, Arctic}
 @export var type = FoxType.Default
 @export var attackSpeed = 0.5
 @export var atttackDamage = 20
-
+var shop = preload("res://scenes/shop.tscn")
+var attackTimer = 0
 var attackTimer = 0
 
 
@@ -47,7 +48,6 @@ func get_input() -> void:
 		$Sprite.play("run")
 	else:
 		$Sprite.play("idle")
-	
 	if direction.x > 0:
 		$Sprite.flip_h = false
 	elif direction.x < 0:
@@ -60,6 +60,9 @@ func get_input() -> void:
 		elif type == FoxType.Arctic:
 			type = FoxType.Default
 			update_texture(preload("res://sprites/Fox Sprite Sheet.png"))
+	if Input.is_action_just_pressed("ui_accept"):
+		var ShopInstantiate = shop.instantiate()
+		get_tree().root.add_child.call_deferred(ShopInstantiate)
 
 func damage(dmg: int):
 	$HealthBar.value -= dmg
