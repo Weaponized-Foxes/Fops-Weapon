@@ -37,7 +37,7 @@ func handle_attacks(delta: float) -> void:
 
 func basic_attack():
 	for enemy in $Slash.get_overlapping_bodies():
-		enemy.damage(atttackDamage)
+		enemy.damage(atttackDamage, "fire melee")
 
 func get_input() -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")

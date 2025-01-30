@@ -21,6 +21,12 @@ func ai():
 	else:
 		throw()
 
+func damage(dmg: int, dmgType: String):
+	if dmgType.contains("fire"):
+		dmg *= 1.5
+	super.damage(dmg, dmgType)
+
+
 func throw():
 	$Sprite.play("throw")
 

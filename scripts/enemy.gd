@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 		ai()
 		move_and_slide()
 
-func damage(dmg: int):
+func damage(dmg: int, dmgType: String):
 	$HealthBar.value -= dmg
 	$Sprite.play("damage")
 	if $HealthBar.value <= 0:
