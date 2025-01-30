@@ -9,7 +9,6 @@ enum FoxType {Default, Arctic}
 @export var atttackDamage = 20
 var shop = preload("res://scenes/shop.tscn")
 var attackTimer = 0
-var attackTimer = 0
 
 
 
