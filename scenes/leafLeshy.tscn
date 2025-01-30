@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfwpl0a37qoif"]
+
+[ext_resource type="PackedScene" uid="uid://vdbyqmi2fnoo" path="res://scenes/enemy.tscn" id="1_lu7yq"]
+[ext_resource type="Script" path="res://scripts/leaf_leshy.gd" id="2_2y84y"]
+[ext_resource type="SpriteFrames" uid="uid://d4cc2bnoy5ka1" path="res://sprites/leafLeshyFrames.tres" id="2_fwjnn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvvyr"]
+radius = 6.5192
+
+[node name="LeafLeshy" instance=ExtResource("1_lu7yq")]
+script = ExtResource("2_2y84y")
+seed_speed = 150
+seed_damage = 10
+
+[node name="HealthBar" parent="." index="0"]
+offset_left = -7.0
+offset_top = -9.0
+offset_right = 7.0
+offset_bottom = -7.0
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2(0, -9.5)
+sprite_frames = ExtResource("2_fwjnn")
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="." index="2"]
+shape = SubResource("CircleShape2D_yvvyr")

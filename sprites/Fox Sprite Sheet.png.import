@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfx6wcttm57kk"
-path="res://.godot/imported/Fire Fox Sprite Sheet.png-30576abfaee5d4caa712fd439ab837b8.ctex"
+uid="uid://c1cj4ni2i2ngf"
+path="res://.godot/imported/Fox Sprite Sheet.png-7daa1d662b9cf776bc586cc8ee96ade5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fire Fox Sprite Sheet.png"
-dest_files=["res://.godot/imported/Fire Fox Sprite Sheet.png-30576abfaee5d4caa712fd439ab837b8.ctex"]
+source_file="res://sprites/Fox Sprite Sheet.png"
+dest_files=["res://.godot/imported/Fox Sprite Sheet.png-7daa1d662b9cf776bc586cc8ee96ade5.ctex"]
 
 [params]
 

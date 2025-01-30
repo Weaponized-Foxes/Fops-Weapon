@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwo4tl8ksmecl"]
+
+[ext_resource type="SpriteFrames" uid="uid://d1q6e7cimgf1m" path="res://sprites/FoxFrames.tres" id="1_atmgh"]
+[ext_resource type="Script" path="res://scripts/fox.gd" id="1_f3bo6"]
+[ext_resource type="SpriteFrames" uid="uid://bu0rd8ol2iprf" path="res://sprites/SlashFrames.tres" id="3_fapsk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f8pgw"]
+radius = 7.5
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gsyri"]
+radius = 3.75
+height = 15.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfa08"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nar0k"]
+bg_color = Color(0, 1, 0, 1)
+
+[node name="Fox" type="CharacterBody2D"]
+scale = Vector2(4, 4)
+collision_mask = 255
+motion_mode = 1
+script = ExtResource("1_f3bo6")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -8.5)
+sprite_frames = ExtResource("1_atmgh")
+animation = &"die"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_f8pgw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Slash" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 2
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Slash"]
+position = Vector2(5.5, 0)
+rotation = 1.5708
+sprite_frames = ExtResource("3_fapsk")
+frame = 10
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slash"]
+position = Vector2(6.25, 0)
+shape = SubResource("CapsuleShape2D_gsyri")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = 7.0
+offset_bottom = -8.0
+theme_override_styles/background = SubResource("StyleBoxFlat_xfa08")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nar0k")
+show_percentage = false

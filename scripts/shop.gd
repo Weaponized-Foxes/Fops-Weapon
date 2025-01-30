@@ -9,6 +9,9 @@ var forSale = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	%Button1.button_down.connect(func(): on_buy_pressed("Button 1"))
+	%Button2.button_down.connect(func(): on_buy_pressed("Button 2"))
+	%Button3.button_down.connect(func(): on_buy_pressed("Button 3"))
 	print(forSale)
 	print("Shop Ready")
 	pass 
@@ -20,6 +23,7 @@ func _process(delta: float) -> void:
 		queue_free()
 	pass
 
-func _on_buy_pressed(ButtonName: String):
+
+func on_buy_pressed(ButtonName: String):
 	print(ButtonName)
 	pass
