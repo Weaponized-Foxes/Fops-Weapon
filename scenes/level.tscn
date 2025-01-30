@@ -17,3 +17,7 @@ unique_name_in_owner = true
 
 [node name="LeafLeshy" parent="." instance=ExtResource("2_petyh")]
 position = Vector2(379, -17)
+seed_damage = 10
+max_health = 40
+speed = 170
+
