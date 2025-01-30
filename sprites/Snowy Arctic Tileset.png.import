@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpw2qx2a2nkf0"
-path="res://.godot/imported/bob.png-bcb9cf69f1a9ae5d79ac41632f3db36e.ctex"
+uid="uid://r4eit4hrqux3"
+path="res://.godot/imported/Snowy Arctic Tileset.png-36f2d5e60ef189af00b151c6dd4a85ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bob.png"
-dest_files=["res://.godot/imported/bob.png-bcb9cf69f1a9ae5d79ac41632f3db36e.ctex"]
+source_file="res://sprites/Snowy Arctic Tileset.png"
+dest_files=["res://.godot/imported/Snowy Arctic Tileset.png-36f2d5e60ef189af00b151c6dd4a85ec.ctex"]
 
 [params]
 

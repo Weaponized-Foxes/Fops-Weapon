@@ -1,9 +1,9 @@
-extends "res://enemy.gd"
+extends "res://scripts/enemy.gd"
 
 @export var seed_speed = 120
 @export var seed_damage = 10
 
-var seedScene = preload("res://seed.tscn")
+var seedScene = preload("res://scenes/seed.tscn")
 
 func _ready() -> void:
 	super._ready()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du0meikyjb6qx"
-path="res://.godot/imported/Toxic Fox Sprite Sheet.png-4c2b452c106c389aeeb76c1e3e0556ec.ctex"
+uid="uid://c04i3288a0n5m"
+path="res://.godot/imported/slash-sheet.png-0483395bd30750a4f91aa7990b3c9821.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Toxic Fox Sprite Sheet.png"
-dest_files=["res://.godot/imported/Toxic Fox Sprite Sheet.png-4c2b452c106c389aeeb76c1e3e0556ec.ctex"]
+source_file="res://sprites/slash-sheet.png"
+dest_files=["res://.godot/imported/slash-sheet.png-0483395bd30750a4f91aa7990b3c9821.ctex"]
 
 [params]
 

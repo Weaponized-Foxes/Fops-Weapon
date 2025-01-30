@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxnuq6opfqby2"
-path="res://.godot/imported/Leshy Leaf Sprite Sheet.png-de5cf1c02301bc7e4a2cc3a4ad7ded9a.ctex"
+uid="uid://cb5d3tf5b4qa"
+path="res://.godot/imported/Seed.png-fb395d96a730801998e045a569a39b0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Leshy Leaf Sprite Sheet.png"
-dest_files=["res://.godot/imported/Leshy Leaf Sprite Sheet.png-de5cf1c02301bc7e4a2cc3a4ad7ded9a.ctex"]
+source_file="res://sprites/Seed.png"
+dest_files=["res://.godot/imported/Seed.png-fb395d96a730801998e045a569a39b0a.ctex"]
 
 [params]
 

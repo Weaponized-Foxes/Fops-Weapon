@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb5d3tf5b4qa"
-path="res://.godot/imported/Seed.png-07e0fc987fded7e626c85d3075db5bbd.ctex"
+uid="uid://bjew6og4bs5lw"
+path="res://.godot/imported/Arctic Fox Sprite Sheet.png-80ad6d35bcb355376cfdfdf2e273f954.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Seed.png"
-dest_files=["res://.godot/imported/Seed.png-07e0fc987fded7e626c85d3075db5bbd.ctex"]
+source_file="res://sprites/Arctic Fox Sprite Sheet.png"
+dest_files=["res://.godot/imported/Arctic Fox Sprite Sheet.png-80ad6d35bcb355376cfdfdf2e273f954.ctex"]
 
 [params]
 

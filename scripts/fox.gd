@@ -16,7 +16,7 @@ func _ready() -> void:
 	$HealthBar.max_value = max_health
 	$HealthBar.value = max_health
 	if type == FoxType.Arctic:
-		update_texture(preload("res://Arctic Fox Sprite Sheet.png"))
+		update_texture(preload("res://sprites/Arctic Fox Sprite Sheet.png"))
 
 func _process(delta: float) -> void:
 	handle_attacks(delta)
@@ -56,10 +56,10 @@ func get_input() -> void:
 	if Input.is_action_just_pressed("ability_1"):
 		if type == FoxType.Default:
 			type = FoxType.Arctic
-			update_texture(preload("res://Arctic Fox Sprite Sheet.png"))
+			update_texture(preload("res://sprites/Arctic Fox Sprite Sheet.png"))
 		elif type == FoxType.Arctic:
 			type = FoxType.Default
-			update_texture(preload("res://Fox Sprite Sheet.png"))
+			update_texture(preload("res://sprites/Fox Sprite Sheet.png"))
 
 func damage(dmg: int):
 	$HealthBar.value -= dmg

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjew6og4bs5lw"
-path="res://.godot/imported/Arctic Fox Sprite Sheet.png-b1622a495e163d0bc89a1cee354c5032.ctex"
+uid="uid://dxnuq6opfqby2"
+path="res://.godot/imported/Leshy Leaf Sprite Sheet.png-37d28afcb53d13e2bb116da1edfd5f2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arctic Fox Sprite Sheet.png"
-dest_files=["res://.godot/imported/Arctic Fox Sprite Sheet.png-b1622a495e163d0bc89a1cee354c5032.ctex"]
+source_file="res://sprites/Leshy Leaf Sprite Sheet.png"
+dest_files=["res://.godot/imported/Leshy Leaf Sprite Sheet.png-37d28afcb53d13e2bb116da1edfd5f2c.ctex"]
 
 [params]
 
