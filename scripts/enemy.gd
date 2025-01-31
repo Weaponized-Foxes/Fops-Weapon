@@ -12,13 +12,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if ($Sprite.animation == "damage" || $Sprite.animation == "attack") && $Sprite.is_playing():
 		return
-	look_at_player()
 	if $HealthBar.value <= 0:
 		if not $Sprite.is_playing():
 			queue_free()
 	else:
 		ai()
 		move_and_slide()
+	look_at_player()
 
 func damage(dmg: int, dmgType: String):
 	$HealthBar.value -= dmg
@@ -53,3 +53,4 @@ func flip(_flipped: bool):
 		scale = Vector2(-4, 4)
 	else:
 		scale = Vector2(4, 4)
+	rotation = 0

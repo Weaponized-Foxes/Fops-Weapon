@@ -5,9 +5,9 @@ extends "res://scripts/melee_enemy.gd"
 func _process(delta: float) -> void:
 	super._process(delta)
 	if $Sprite.animation == "attack" && $Sprite.frame == 6:
-		rotation_degrees += spin_speed
-	else:
 		if flipped:
-			rotation_degrees = 180
+			rotation_degrees -= spin_speed
 		else:
-			rotation_degrees = 0
+			rotation_degrees += spin_speed
+	else:
+		rotation_degrees = 0
