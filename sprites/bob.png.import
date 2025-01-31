@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1cj4ni2i2ngf"
-path="res://.godot/imported/Fox Sprite Sheet.png-07908dbd26cad2421bc0ca025340c80d.ctex"
+uid="uid://bpw2qx2a2nkf0"
+path="res://.godot/imported/bob.png-9f125ed0f6a53879ed5cd450d2f6afd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fox Sprite Sheet.png"
-dest_files=["res://.godot/imported/Fox Sprite Sheet.png-07908dbd26cad2421bc0ca025340c80d.ctex"]
+source_file="res://sprites/bob.png"
+dest_files=["res://.godot/imported/bob.png-9f125ed0f6a53879ed5cd450d2f6afd0.ctex"]
 
 [params]
 

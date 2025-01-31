@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkpmg172mo3x4"
-path="res://.godot/imported/Forest Tileset v2.png-e7a8712c7a2cbfdbd2ad1960058a6ebf.ctex"
+uid="uid://dxnuq6opfqby2"
+path="res://.godot/imported/Leshy Leaf Sprite Sheet.png-37d28afcb53d13e2bb116da1edfd5f2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Forest Tileset v2.png"
-dest_files=["res://.godot/imported/Forest Tileset v2.png-e7a8712c7a2cbfdbd2ad1960058a6ebf.ctex"]
+source_file="res://sprites/Leshy Leaf Sprite Sheet.png"
+dest_files=["res://.godot/imported/Leshy Leaf Sprite Sheet.png-37d28afcb53d13e2bb116da1edfd5f2c.ctex"]
 
 [params]
 
