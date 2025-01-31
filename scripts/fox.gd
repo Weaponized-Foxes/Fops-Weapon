@@ -53,14 +53,7 @@ func get_input() -> void:
 		$Sprite.flip_h = false
 	elif direction.x < 0:
 		$Sprite.flip_h = true
-
-	if Input.is_action_just_pressed("ability_1"):
-		if type == FoxType.Default:
-			type = FoxType.Arctic
-			update_texture(preload("res://sprites/Arctic Fox Sprite Sheet.png"))
-		elif type == FoxType.Arctic:
-			type = FoxType.Default
-			update_texture(preload("res://sprites/Fox Sprite Sheet.png"))
+		
 	if Input.is_action_just_pressed("ui_accept"):
 		if Global.characterLevel >= 5 and Global.choice == false:
 			Global.choice = true
