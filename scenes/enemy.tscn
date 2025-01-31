@@ -20,10 +20,10 @@ platform_floor_layers = 4294967264
 script = ExtResource("1_h4o78")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
-offset_left = -8.0
-offset_top = -14.0
-offset_right = 8.0
-offset_bottom = -10.0
+offset_left = -7.0
+offset_top = -13.0
+offset_right = 7.0
+offset_bottom = -11.0
 theme_override_styles/background = SubResource("StyleBoxFlat_tigfr")
 theme_override_styles/fill = SubResource("StyleBoxFlat_2lvmr")
 show_percentage = false

@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var max_health = 40
 @export var speed = 170
 @export var attack_damage = 10
+var flipped
 
 func _ready() -> void:
 	$HealthBar.max_value = max_health
@@ -46,9 +47,9 @@ func ai():
 	# print(name + " is thinking...")
 	pass
 
-func flip(flipped: bool):
+func flip(_flipped: bool):
+	flipped = _flipped
 	if flipped:
 		scale = Vector2(-4, 4)
 	else:
 		scale = Vector2(4, 4)
-	rotation = 0
