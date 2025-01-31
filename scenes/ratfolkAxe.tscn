@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://ne8hqfew3lqx"]
+
+[ext_resource type="PackedScene" uid="uid://vdbyqmi2fnoo" path="res://scenes/enemy.tscn" id="1_wrmm0"]
+[ext_resource type="Script" path="res://scenes/ratfolk_axe.gd" id="2_agb0u"]
+[ext_resource type="SpriteFrames" uid="uid://dlh5arxc4exvg" path="res://sprites/RatfolkAxeFrames.tres" id="2_uh3in"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s8n3q"]
+radius = 7.38664
+height = 25.9423
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0j7c1"]
+radius = 12.5025
+
+[node name="RatfolkAxe" instance=ExtResource("1_wrmm0")]
+script = ExtResource("2_agb0u")
+spin_speed = 30
+hit_frame = 6
+max_health = 100
+speed = 130
+attack_damage = 40
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2(0, -8)
+sprite_frames = ExtResource("2_uh3in")
+animation = &"idle"
+
+[node name="Slash" type="Area2D" parent="." index="3"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slash" index="0"]
+position = Vector2(7, -4.25)
+rotation = -0.418707
+shape = SubResource("CapsuleShape2D_s8n3q")
+
+[node name="AttackArea" type="Area2D" parent="." index="4"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" index="0"]
+shape = SubResource("CircleShape2D_0j7c1")

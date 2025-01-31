@@ -9,18 +9,21 @@
 bg_color = Color(0, 1, 0, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8a3qx"]
+radius = 8.0
 
 [node name="Enemy" type="CharacterBody2D"]
 scale = Vector2(4, 4)
 collision_layer = 2
 collision_mask = 255
+motion_mode = 1
+platform_floor_layers = 4294967264
 script = ExtResource("1_h4o78")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
-offset_left = -8.0
-offset_top = -14.0
-offset_right = 8.0
-offset_bottom = -10.0
+offset_left = -7.0
+offset_top = -13.0
+offset_right = 7.0
+offset_bottom = -11.0
 theme_override_styles/background = SubResource("StyleBoxFlat_tigfr")
 theme_override_styles/fill = SubResource("StyleBoxFlat_2lvmr")
 show_percentage = false
