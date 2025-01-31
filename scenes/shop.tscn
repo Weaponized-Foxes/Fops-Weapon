@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_j432c"]
 [ext_resource type="Script" path="res://scripts/buy.gd" id="2_svpgi"]
 
-[node name="Control" type="CanvasLayer"]
+[node name="Control2" type="CanvasLayer"]
 script = ExtResource("1_j432c")
 
 [node name="ColorRect" type="ColorRect" parent="."]

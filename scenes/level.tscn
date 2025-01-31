@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ch50nc763qy0s"]
+[gd_scene load_steps=7 format=3 uid="uid://ch50nc763qy0s"]
 
 [ext_resource type="PackedScene" uid="uid://dnevc77mdovw4" path="res://scenes/tile_map_layer.tscn" id="1_7hbol"]
 [ext_resource type="PackedScene" uid="uid://dwo4tl8ksmecl" path="res://scenes/fox.tscn" id="1_dcx8h"]
 [ext_resource type="Script" path="res://scripts/map.gd" id="2_i4bou"]
 [ext_resource type="PackedScene" uid="uid://dfwpl0a37qoif" path="res://scenes/leafLeshy.tscn" id="2_petyh"]
-[ext_resource type="PackedScene" uid="uid://ne8hqfew3lqx" path="res://scenes/ratfolkAxe.tscn" id="5_m4eyn"]
+[ext_resource type="TileSet" uid="uid://c6nx434et2mvo" path="res://sprites/map.tres" id="3_768ik"]
+[ext_resource type="PackedScene" path="res://scenes/ratfolkAxe.tscn" id="5_m4eyn"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -12,6 +13,10 @@
 position = Vector2(0, 0)
 tile_map_data = PackedByteArray()
 script = ExtResource("2_i4bou")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayer"]
+z_index = 1
+tile_set = ExtResource("3_768ik")
 
 [node name="Fox" parent="." instance=ExtResource("1_dcx8h")]
 unique_name_in_owner = true
