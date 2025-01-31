@@ -1,6 +1,6 @@
 extends TileMapLayer
 var rng = RandomNumberGenerator.new()
-var tarrains = [0,1,2]
+var tarrains = [0,1]
 
 func addChunk(size: int, centerX: int, centerY: int ) -> Array:
 	var tiles = []
