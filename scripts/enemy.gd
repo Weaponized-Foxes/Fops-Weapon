@@ -10,6 +10,8 @@ func _ready() -> void:
 	$HealthBar.value = max_health
 
 func _process(delta: float) -> void:
+	if Global.paused:
+		return
 	if ($Sprite.animation == "damage" || $Sprite.animation == "attack") && $Sprite.is_playing():
 		return
 	look_at_player()
