@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-enum FoxType {Default, Arctic}
+enum FoxType {Default, Arctic, Toxic}
 
 @export var max_health = 100
 @export var speed = 200
@@ -8,8 +8,8 @@ enum FoxType {Default, Arctic}
 @export var attackSpeed = 0.5
 @export var atttackDamage = 20
 var shop = preload("res://scenes/shop.tscn")
+var choiceScreen = preload("res://scenes/choice.tscn")
 var attackTimer = 0
-
 
 
 func _ready() -> void:
@@ -19,6 +19,8 @@ func _ready() -> void:
 		update_texture(preload("res://sprites/Arctic Fox Sprite Sheet.png"))
 
 func _process(delta: float) -> void:
+	if Global.paused:
+		return
 	handle_attacks(delta)
 
 func handle_attacks(delta: float) -> void:
@@ -60,8 +62,21 @@ func get_input() -> void:
 			type = FoxType.Default
 			update_texture(preload("res://sprites/Fox Sprite Sheet.png"))
 	if Input.is_action_just_pressed("ui_accept"):
-		var ShopInstantiate = shop.instantiate()
-		get_tree().root.add_child.call_deferred(ShopInstantiate)
+		if Global.characterLevel >= 5 and Global.choice == false:
+			Global.choice = true
+			var choiceScreenInstance = choiceScreen.instantiate()
+			get_tree().root.add_child.call_deferred(choiceScreenInstance)
+		else:
+			var ShopInstantiate = shop.instantiate()
+			get_tree().root.add_child.call_deferred(ShopInstantiate)
+
+func update_fox():
+	if type == FoxType.Default:
+		update_texture(preload("res://sprites/Fox Sprite Sheet.png"))
+	elif type == FoxType.Arctic:
+		update_texture(preload("res://sprites/Arctic Fox Sprite Sheet.png"))
+	elif type == FoxType.Toxic:
+		update_texture(preload("res://sprites/Toxic Fox Sprite Sheet.png"))
 
 func damage(dmg: int):
 	$HealthBar.value -= dmg
@@ -91,5 +106,7 @@ func update_texture(texture: Texture):
 	$Sprite.sprite_frames = updated_frames
 
 func _physics_process(delta: float) -> void:
+	if Global.paused:
+		return
 	get_input()
 	move_and_slide()
