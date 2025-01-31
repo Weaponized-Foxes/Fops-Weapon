@@ -33,10 +33,6 @@ theme_override_font_sizes/font_size = 50
 text = "START"
 script = ExtResource("1_vlbkk")
 
-[node name="Control" type="Control" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-
 [node name="Label2" type="Label" parent="."]
 unique_name_in_owner = true
 visible = false
