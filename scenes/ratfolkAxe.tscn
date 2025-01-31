@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ne8hqfew3lqx"]
 
 [ext_resource type="PackedScene" uid="uid://vdbyqmi2fnoo" path="res://scenes/enemy.tscn" id="1_wrmm0"]
-[ext_resource type="Script" path="res://scenes/ratfolk_axe.gd" id="2_agb0u"]
+[ext_resource type="Script" path="res://scripts/ratfolk_axe.gd" id="2_agb0u"]
 [ext_resource type="SpriteFrames" uid="uid://dlh5arxc4exvg" path="res://sprites/RatfolkAxeFrames.tres" id="2_uh3in"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s8n3q"]

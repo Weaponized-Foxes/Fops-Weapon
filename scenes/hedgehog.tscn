@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://21nond6ro0jb"]
+
+[ext_resource type="PackedScene" uid="uid://vdbyqmi2fnoo" path="res://scenes/enemy.tscn" id="1_oo8r6"]
+[ext_resource type="Script" path="res://scripts/hedgehog.gd" id="2_ri820"]
+[ext_resource type="SpriteFrames" uid="uid://cvgef1h1htbmb" path="res://sprites/hedgehogFrames.tres" id="3_8vkko"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_447e2"]
+radius = 5.0
+height = 17.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_emdxt"]
+radius = 14.2522
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ek2co"]
+radius = 10.0281
+
+[node name="Hedgehog" instance=ExtResource("1_oo8r6")]
+script = ExtResource("2_ri820")
+hit_frame = 3
+
+[node name="HealthBar" parent="." index="0"]
+offset_top = -9.0
+offset_bottom = -7.0
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2(1, -11)
+sprite_frames = ExtResource("3_8vkko")
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="." index="2"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_447e2")
+
+[node name="Slash" type="Area2D" parent="." index="3"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slash" index="0"]
+shape = SubResource("CircleShape2D_emdxt")
+
+[node name="AttackArea" type="Area2D" parent="." index="4"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" index="0"]
+shape = SubResource("CircleShape2D_ek2co")
