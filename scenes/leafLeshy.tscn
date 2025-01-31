@@ -12,9 +12,7 @@ script = ExtResource("2_2y84y")
 seed_speed = 150
 
 [node name="HealthBar" parent="." index="0"]
-offset_left = -7.0
 offset_top = -9.0
-offset_right = 7.0
 offset_bottom = -7.0
 
 [node name="Sprite" parent="." index="1"]
