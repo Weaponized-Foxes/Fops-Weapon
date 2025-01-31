@@ -1,19 +1,19 @@
 [gd_scene load_steps=6 format=3 uid="uid://ne8hqfew3lqx"]
 
 [ext_resource type="PackedScene" uid="uid://vdbyqmi2fnoo" path="res://scenes/enemy.tscn" id="1_wrmm0"]
-[ext_resource type="Script" path="res://scripts/melee_enemy.gd" id="2_t4jdf"]
+[ext_resource type="Script" path="res://scenes/ratfolk_axe.gd" id="2_agb0u"]
 [ext_resource type="SpriteFrames" uid="uid://dlh5arxc4exvg" path="res://sprites/RatfolkAxeFrames.tres" id="2_uh3in"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s8n3q"]
 radius = 7.38664
 height = 25.9423
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_syda4"]
-radius = 4.79767
-height = 17.9207
+[sub_resource type="CircleShape2D" id="CircleShape2D_0j7c1"]
+radius = 12.5025
 
 [node name="RatfolkAxe" instance=ExtResource("1_wrmm0")]
-script = ExtResource("2_t4jdf")
+script = ExtResource("2_agb0u")
+spin_speed = 30
 hit_frame = 6
 max_health = 100
 speed = 130
@@ -36,6 +36,4 @@ shape = SubResource("CapsuleShape2D_s8n3q")
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" index="0"]
-position = Vector2(7, -4.25)
-rotation = -0.418707
-shape = SubResource("CapsuleShape2D_syda4")
+shape = SubResource("CircleShape2D_0j7c1")
