@@ -66,6 +66,11 @@ func get_input() -> void:
 func damage(dmg: int):
 	$HealthBar.value -= dmg
 
+func healthUp(heal: int):
+	max_health += heal
+	$HealthBar.max_value = max_health
+	$HealthBar.value += heal
+
 func update_texture(texture: Texture):
 	var reference_frames: SpriteFrames = $Sprite.sprite_frames
 	var updated_frames = SpriteFrames.new()
