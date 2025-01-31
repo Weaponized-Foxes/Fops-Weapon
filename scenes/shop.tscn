@@ -78,6 +78,30 @@ action_mode = 0
 text = "buy"
 script = ExtResource("2_svpgi")
 
+[node name="Title2" type="RichTextLabel" parent="ColorRect/ColorRect/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 38.0
+offset_top = -41.0
+offset_right = 254.0
+offset_bottom = -10.0
+bbcode_enabled = true
+text = "[center]Example2[/center] "
+
+[node name="Description2" type="RichTextLabel" parent="ColorRect/ColorRect/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 18.0
+offset_right = 264.0
+offset_bottom = 280.0
+bbcode_enabled = true
+text = "
+[center]DESCRIPTION[/center] 
+
+COST:
+0
+"
+
 [node name="ColorRect2" type="ColorRect" parent="ColorRect/ColorRect"]
 layout_mode = 1
 anchors_preset = 4
@@ -93,9 +117,8 @@ color = Color(0, 0, 0, 1)
 [node name="ColorRect2" type="ColorRect" parent="ColorRect/ColorRect/ColorRect2"]
 layout_mode = 0
 offset_left = 22.0
-offset_top = -59.0
+offset_top = -56.0
 offset_right = 265.0
-offset_bottom = -3.0
 color = Color(0.412152, 0.412152, 0.412152, 1)
 
 [node name="Button1" type="Button" parent="ColorRect/ColorRect/ColorRect2"]
@@ -107,6 +130,29 @@ offset_right = 220.0
 offset_bottom = 370.0
 text = "buy"
 script = ExtResource("2_svpgi")
+
+[node name="Title1" type="RichTextLabel" parent="ColorRect/ColorRect/ColorRect2"]
+unique_name_in_owner = true
+offset_left = 38.0
+offset_top = -41.0
+offset_right = 254.0
+offset_bottom = -10.0
+bbcode_enabled = true
+text = "[center]Example1[/center] "
+
+[node name="Description1" type="RichTextLabel" parent="ColorRect/ColorRect/ColorRect2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 18.0
+offset_right = 264.0
+offset_bottom = 280.0
+bbcode_enabled = true
+text = "
+[center]DESCRIPTION[/center] 
+
+COST:
+0
+"
 
 [node name="ColorRect3" type="ColorRect" parent="ColorRect/ColorRect"]
 layout_mode = 1
@@ -125,9 +171,9 @@ color = Color(0, 0, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="ColorRect/ColorRect/ColorRect3"]
 layout_mode = 0
-offset_left = 24.0
+offset_left = 22.0
 offset_top = -55.0
-offset_right = 267.0
+offset_right = 265.0
 offset_bottom = 1.0
 color = Color(0.412152, 0.412152, 0.412152, 1)
 
@@ -140,3 +186,26 @@ offset_right = 220.0
 offset_bottom = 370.0
 text = "buy"
 script = ExtResource("2_svpgi")
+
+[node name="Title3" type="RichTextLabel" parent="ColorRect/ColorRect/ColorRect3"]
+unique_name_in_owner = true
+offset_left = 38.0
+offset_top = -41.0
+offset_right = 254.0
+offset_bottom = -10.0
+bbcode_enabled = true
+text = "[center]Example3[/center] "
+
+[node name="Description3" type="RichTextLabel" parent="ColorRect/ColorRect/ColorRect3"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 18.0
+offset_right = 264.0
+offset_bottom = 280.0
+bbcode_enabled = true
+text = "
+[center]DESCRIPTION[/center] 
+
+COST:
+0
+"
