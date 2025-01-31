@@ -1,6 +1,5 @@
 extends TileMapLayer
 var rng = RandomNumberGenerator.new()
-var tarrains = [0,1]
 
 func getPathPattern(Type: String):
 	match Type:
@@ -44,45 +43,9 @@ func getPathOptions(move: String):
 		"down":
 			return ["up-right","up-left","up-down"]
 
-
-func addChunk(size: int, centerX: int, centerY: int ) -> Array:
-	var tiles = []
-	var StartPosX = centerX - size/2
-	var StartPosY = centerY - size/2
-	for TileY in range(StartPosY,StartPosY+size):
-		for TileX in range(StartPosX,StartPosX+size):
-			tiles.append(Vector2i(TileX,TileY))
-	return tiles
-
-		
-	
-
-func addTiles(StartAreaX: int,StartAreaY: int,EndAreaX: int,EndAreaY: int) -> Array:
-	var tiles = []
-	for TileY in range(StartAreaY,EndAreaY):
-		for TileX in range(StartAreaX,EndAreaX):
-			tiles.append(Vector2i(TileX,TileY))
-	return tiles
-
-func genAreaTiles(size: int, CenterX: int, CenterY: int) -> void:
-	var TileArray = addChunk(size,CenterX,CenterY)
-	set_cells_terrain_connect(TileArray, 0, tarrains.pick_random())
-	pass
-
 func genPattern(CenterX,CenterY,Pattern: Array) -> void:
 	set_pattern(Vector2i(CenterX,CenterY),Pattern[0])
 	get_child(0).set_pattern(Vector2i(CenterX,CenterY),Pattern[1])
-
-
-func randomGen():
-	var previousY = -10*8
-	var previousX = -10*8
-	var area = 10*8
-
-	for cubeY in range(previousY,area,7):
-		for cubeX in range(previousX,area,7):
-			rng.randomize() 
-			genAreaTiles(8,cubeX,cubeY)
 	
 func HorizontalRight(pattern: TileMapPattern):
 	var size = pattern.get_size()
@@ -98,9 +61,6 @@ func HorizontalRight(pattern: TileMapPattern):
 			shift += i
 			break
 	return shift
-
-	
-
 
 func pathGen():
 	var Lx = -8
